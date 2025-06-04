@@ -17,7 +17,7 @@ A PostgreSQL MCP server implementation using the [Model Context Protocol (MCP)](
 - Get foreign key information
 - Execute SQL queries
 
-## Quick Start
+## Quick Start
 
 ```bash
 # Run the server without a DB connection (useful for Glama or inspection)
