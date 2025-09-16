@@ -33,16 +33,8 @@ def log_retry_attempt(retry_state):
         f"attempt {retry_state.attempt_number}/{RETRY_ATTEMPTS}..."
     )
 
-# Initialize server with capabilities
-mcp = FastMCP(
-    "PostgreSQL Explorer",
-    capabilities={
-        "tools": True,      # Enable tool support
-        "logging": True,    # Enable logging support
-        "resources": False, # We don't use resources
-        "prompts": False   # We don't use prompts
-    }
-)
+# Initialize server (capabilities parameter not supported in current FastMCP version)
+mcp = FastMCP("PostgreSQL Explorer")
 
 # Connection string from --conn flag or POSTGRES_CONNECTION_STRING env var
 parser = argparse.ArgumentParser(description="PostgreSQL Explorer MCP server")
